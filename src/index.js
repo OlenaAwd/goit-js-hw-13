@@ -1,5 +1,8 @@
-import './styles.css';
+import './sass/main.scss';
 import photoCardTemp from './photocardtemp.hbs';
+import Notiflix from 'notiflix';
+// import SimpleLightbox from 'simplelightbox';
+
 
 const refs = {
     gallery: document.querySelector('gallery'),
@@ -12,7 +15,7 @@ function onSearch (e) {
     e.preventDefault();
 }
 
-fetch('https://pixabay.com/api/?key=22578440-e1e5ecfa8eecbfc5a41a583d6&image_type=photo&orientation=horizontal&safesearch=true&per_page=40') limit=40
+fetch('https://pixabay.com/api/?key=22578440-e1e5ecfa8eecbfc5a41a583d6&image_type=photo&orientation=horizontal&safesearch=true&per_page=40') 
     .then(response => {
         return response.json();
     })
@@ -24,4 +27,3 @@ fetch('https://pixabay.com/api/?key=22578440-e1e5ecfa8eecbfc5a41a583d6&image_typ
     .catch(error => {
         console.log(error);
     });
-
