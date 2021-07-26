@@ -3,7 +3,7 @@ parcelRequire=function(e,r,t,n){var i,o="function"==typeof parcelRequire&&parcel
 },{}],"Amgo":[function(require,module,exports) {
 "use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.API_KEY=void 0;const e="22578440-e1e5ecfa8eecbfc5a41a583d6";exports.API_KEY=e;
 },{}],"uOWd":[function(require,module,exports) {
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.fetchCollection=o;var e=require("./key.js"),r=require("./common.js");const t="https://pixabay.com/api/";function o(){return fetch(`${t}?&key=${e.API_KEY}&q=${r.formSearch}&image_type=photo&orientation=horizontal&safesearch=true&per_page=${r.quantityPerPage}&page=${r.pageNumber}`).then(e=>{if(!e.ok)throw new Error(e.status);return e.json()})}
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.fetchCollection=o;var e=require("./key.js"),t=require("./common.js");const r="https://pixabay.com/api/";async function o(){const o=await fetch(`${r}?&key=${e.API_KEY}&q=${t.formSearch}&image_type=photo&orientation=horizontal&safesearch=true&per_page=${t.quantityPerPage}&page=${t.pageNumber}`);if(!o.ok)throw new Error(o.status);return await o.json()}
 },{"./key.js":"Amgo","./common.js":"eTjE"}],"VyiV":[function(require,module,exports) {
 "use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.refs=void 0;const e={searchForm:document.querySelector("#search-form"),gallery:document.querySelector(".gallery"),btnLoadMore:document.querySelector(".load-more")};exports.refs=e;
 },{}],"pAws":[function(require,module,exports) {
@@ -21,4 +21,4 @@ var t,e=arguments[3];!function(e,i){"function"==typeof t&&t.amd?t([],function(){
 },{"./fetchCollection.js":"uOWd","./refs.js":"VyiV","../templates/collection.hbs":"FbWy","notiflix":"xeAG"}],"Focm":[function(require,module,exports) {
 "use strict";require("../node_modules/normalize.css/normalize.css"),require("./sass/main.scss"),require("./js/common.js");
 },{"../node_modules/normalize.css/normalize.css":"DOAq","./sass/main.scss":"DOAq","./js/common.js":"eTjE"}]},{},["Focm"], null)
-//# sourceMappingURL=/goit-js-hw-13/src.c37adef2.js.map
+//# sourceMappingURL=/goit-js-hw-13/src.d2836024.js.map
